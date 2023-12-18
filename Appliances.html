@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>المنتجات</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div class="navbar">
+    <a href="Home.html" style="margin-left: 2%;">الصفحة الرئيسية</a>
+  <a href="AboutUs.html" style="margin-left: 15%;">من نحن</a>
+  <a href="Appliances.html" style="margin-left: 15%;" >المنتجات</a>
+<a id="myBtn" style="margin-left: 15%; cursor: pointer;">عرض السلة</a>
+</div>
+    <h1>منتجاتنا</h1>
+    <table>
+        <tr>
+            <th>المنتج</th>
+            <th>التفاصيل</th>
+            <th>السعر</th>
+            <th>الصورة</th>
+            <th>الإجراء</th>
+        </tr>
+        <tr>
+            <td>براد سامسونج بابين</td>
+            <td>
+                <ul>
+                    <li>الحجم: 800 لتر</li>
+                    <li>تكنولوجيا SpaceMax™</li>
+                    <li>توفير في الطاقة يصل إلى 50%</li>
+                    <li>يدوم طويلاً</li>
+                    <li>محول رقمي</li>
+                    <li>تبريد شامل</li>
+                </ul>
+            </td>
+            <td>6500000 ل.س</td>
+            <td><img src="Images/2.jpg"
+                 alt="براد سامسونج بابين" width="200px" height="200px"></td>
+            <td><button onclick="addToCart('براد سامسونج بابين', 6500000)">Add to Cart</button></td>
+        </tr>
+        <tr>
+            <td>الطابعة اللاسلكية</td>
+            <td>
+                <ul>
+                    <li>الحجم: متوسط</li>
+                    <li>تكنولوجيا: PrintMax™</li>
+                    <li>توفير في الطاقة يصل إلى 20%</li>
+                    <li>يدوم طويلاً</li>
+                    <li>محول رقمي</li>
+                    <li>طباعة عالية الجودة</li>
+                </ul>
+            </td>
+            <td>2000000 ل.س</td>
+            <td><img src="Images/1.jpg"
+                     alt="الطابعة اللاسلكية" width="200px" height="200px"></td>
+            <td><button onclick="addToCart('الطابعة اللاسلكية', 2000000)">Add to Cart</button></td>
+        </tr>
+        
+        <tr>
+            <td>مكبر الصوت الذكي</td>
+            <td>
+                <ul>
+                    <li>الحجم: متوسط</li>
+                    <li>تكنولوجيا: SoundMax™</li>
+                    <li>توفير في الطاقة يصل إلى 20%</li>
+                    <li>يدوم طويلاً</li>
+                    <li>محول رقمي</li>
+                    <li>صوت عالي الجودة</li>
+                </ul>
+            </td>
+            <td>1500000 ل.س</td>
+            <td><img src="Images/3.jpg"
+                     alt="مكبر الصوت الذكي" width="200px" height="200px"></td>
+            <td><button onclick="addToCart('مكبر الصوت الذكي', 1500000)">Add to Cart</button></td>
+        </tr>        
+        <tr>
+            <td>التلفزيون الذكي</td>
+            <td>
+                <ul>
+                    <li>الحجم: 55 بوصة</li>
+                    <li>تكنولوجيا: 4K UHD</li>
+                    <li>توفير في الطاقة يصل إلى 30%</li>
+                    <li>يدوم طويلاً</li>
+                    <li>محول رقمي</li>
+                    <li>توصيل واي فاي</li>
+                </ul>
+            </td>
+            <td>4500000 ل.س</td>
+            <td><img src="Images/4.jpg"
+                     alt="التلفزيون الذكي" width="200px" height="200px"></td>
+            <td><button onclick="addToCart('التلفزيون الذكي', 4500000)">Add to Cart</button></td>
+        </tr>        
+        <tr>
+            <td>مكيف الهواء</td>
+            <td>
+                <ul>
+                    <li>الحجم: 24000 وحدة حرارية بريطانية</li>
+                    <li>تكنولوجيا: Inverter</li>
+                    <li>توفير في الطاقة يصل إلى 60%</li>
+                    <li>يدوم طويلاً</li>
+                    <li>محول رقمي</li>
+                    <li>تبريد سريع</li>
+                </ul>
+            </td>
+            <td>7500000 ل.س</td>
+            <td><img src="Images/6.jpg"
+                     alt="مكيف الهواء" width="200px" height="200px"></td>
+            <td>        <button onclick="addToCart('مكيف الهواء', 7500000)">Add to Cart</button>
+            </td>
+        </tr>        
+        <tr>
+            <td>الثلاجة</td>
+            <td>
+                <ul>
+                    <li>الحجم: 800 لتر</li>
+                    <li>تكنولوجيا: CoolMax™</li>
+                    <li>توفير في الطاقة يصل إلى 40%</li>
+                    <li>يدوم طويلاً</li>
+                    <li>محول رقمي</li>
+                    <li>تبريد سريع</li>
+                </ul>
+            </td>
+            <td>5000000 ل.س</td>
+            <td><img src="Images/7.jpg"
+                     alt="الثلاجة" width="200px" height="200px"></td>
+            <td><button onclick="addToCart('الثلاجة', 5000000)">Add to Cart</button>
+             </td>
+        </tr>        
+        <tr>
+            <td>غسالة الملابس</td>
+            <td>
+                <ul>
+                    <li>الحجم: 10 كيلوغرام</li>
+                    <li>تكنولوجيا: WashMax™</li>
+                    <li>توفير في الطاقة يصل إلى 30%</li>
+                    <li>يدوم طويلاً</li>
+                    <li>محول رقمي</li>
+                    <li>غسيل فعال</li>
+                </ul>
+            </td>
+            <td>4000000 ل.س</td>
+            <td><img src="Images/8.jpg"
+                     alt="غسالة الملابس" width="200px" height="200px"></td>
+            <td> <button onclick="addToCart('غسالة الملابس', 4000000)">Add to Cart</button>
+             </td>
+        </tr>        
+        <tr>
+            <td>فرن الميكروويف</td>
+            <td>
+                <ul>
+                    <li>الحجم: 30 لتر</li>
+                    <li>تكنولوجيا: HeatMax™</li>
+                    <li>توفير في الطاقة يصل إلى 20%</li>
+                    <li>يدوم طويلاً</li>
+                    <li>محول رقمي</li>
+                    <li>طهي سريع</li>
+                </ul>
+            </td>
+            <td>2000000 ل.س</td>
+            <td><img src="Images/5.jpg"
+                     alt="فرن الميكروويف" width="200px" height="200px"></td>
+            <td><button onclick="addToCart('فرن الميكروويف', 2000000)">Add to Cart</button>
+            </td>
+        </tr>        
+        <tr>
+            <td>مكنسة كهربائية</td>
+            <td>
+                <ul>
+                    <li>الحجم: متوسط</li>
+                    <li>تكنولوجيا: CleanMax™</li>
+                    <li>توفير في الطاقة يصل إلى 25%</li>
+                    <li>يدوم طويلاً</li>
+                    <li>محول رقمي</li>
+                    <li>تنظيف فعال</li>
+                </ul>
+            </td>
+            <td>1500000 ل.س</td>
+            <td><img src="Images/9.jpg"
+                     alt="مكنسة كهربائية" width="200px" height="200px"></td>
+                     <td><button onclick="addToCart('مكنسة كهربائية', 1500000)">Add to Cart</button>
+                     </td>
+                    </tr>  
+                    <tr>
+                        <td>غلاية كهربائية</td>
+                        <td>
+                            <ul>
+                                <li>الحجم: 1.5 لتر</li>
+                                <li>تكنولوجيا: BoilMax™</li>
+                                <li>توفير في الطاقة يصل إلى 15%</li>
+                                <li>يدوم طويلاً</li>
+                                <li>محول رقمي</li>
+                                <li>غليان سريع</li>
+                            </ul>
+                        </td>
+                        <td>500000 ل.س</td>
+                        <td><img src="Images/10.jpg"
+                                 alt="غلاية كهربائية" width="200px" height="200px"></td>
+                        <td><button onclick="addToCart('غلاية كهربائية', 500000)">Add to Cart</button>
+                        </td>
+                    </tr>                           
+        </table>
+        <div id="myModal" class="modal">
+
+            <!-- محتوى النافذة المنبثقة -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <h1> سلة المشتريات</h1>
+    <table>
+        <tr>
+            <th>م.</th>
+            <th>المادة</th>
+            <th>السعر (ل.س)</th>
+            <th>الكمية</th>
+            <th>السعر الإجمالي (ل.س)</th>
+        </tr>
+        <tbody id="cart-items"></tbody>
+        <tfoot>
+            <td colspan="5" style="text-align: center;">الإجمالي
+            </td>
+            <td id="subtotal">ل.س0.00
+            </td>
+            <tr>
+            </tr>
+            <td colspan="5" style="text-align: center;">الضريبة (5%)
+            </td>
+            <td id="tax" >ل.س0.00
+            </td>
+            <tr>
+            </tr>
+            <td colspan="5" style="text-align: center;">المجموع النهائي
+            </td>
+            <td id="total-price">ل.س0.00
+            </td>
+        </tfoot>
+    </table> 
+    <a href="PlaceOrder.html">
+    <button style="width: 20%; font-size: large; font-weight: bold; border-radius: 15px; margin-top: 3%; margin-left: 14%; ">متابعة</button>
+    </a>
+    <button onclick="shoppingCart.clearCart(); displayCart();" style="width: 20%; font-size: large; font-weight: bold; border-radius: 15px; margin-top: 3%; margin-left: 20%;">إلغاء</button>
+            </div>
+          
+          </div>
+          <script>
+    
+            // الحصول على النافذة المنبثقة
+            var modal = document.getElementById("myModal");
+            
+            // الحصول على الزر الذي يفتح النافذة المنبثقة
+            var btn = document.getElementById("myBtn");
+            
+            // الحصول على عنصر <span> الذي يغلق النافذة المنبثقة
+            var span = document.getElementsByClassName("close")[0];
+            
+            // عند النقر على الزر، يفتح النافذة المنبثقة 
+            btn.onclick = function() {
+              modal.style.display = "block";
+            }
+            
+            // عند النقر على <span> (x), يغلق النافذة المنبثقة
+            span.onclick = function() {
+              modal.style.display = "none";
+            }
+            
+            // عند النقر خارج النافذة المنبثقة، يغلقها
+            window.onclick = function(event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            }
+let cart = [];
+let count = 1;
+let type = 1;
+
+function addToCart(name, price) {
+  let item = cart.find(item => item.name === name);
+  if (item) {
+    item.quantity++;
+  } else {
+    cart.push({name: name, price: price, quantity: 1, type: type++});
+  }
+  updateCart();
+}
+
+function updateCart() {
+  let cartItems = document.getElementById("cart-items");
+  let subtotal = document.getElementById("subtotal");
+  let tax = document.getElementById("tax");
+  let totalPrice = document.getElementById("total-price");
+  cartItems.innerHTML = "";
+  let subTotal = 0;
+  cart.forEach(item => {
+    let tr = document.createElement("tr");
+    let tdCount = document.createElement("td");
+    tdCount.innerText = item.type;
+    tr.appendChild(tdCount);
+    let tdName = document.createElement("td");
+    tdName.innerText = item.name;
+    tr.appendChild(tdName);
+    let tdPrice = document.createElement("td");
+    tdPrice.innerText = "ل.س" + item.price.toFixed(2);
+    tr.appendChild(tdPrice);
+    let tdQuantity = document.createElement("td");
+    tdQuantity.innerText = item.quantity;
+    tr.appendChild(tdQuantity);
+    let tdTotalPrice = document.createElement("td");
+    let itemTotalPrice = item.price * item.quantity;
+    tdTotalPrice.innerText = "ل.س" + itemTotalPrice.toFixed(2);
+    tr.appendChild(tdTotalPrice);
+    cartItems.appendChild(tr);
+    subTotal += itemTotalPrice;
+  });
+  let taxAmount = subTotal * 0.05;
+  let total = subTotal + taxAmount;
+  subtotal.innerText = "ل.س" + subTotal.toFixed(2);
+  tax.innerText = "ل.س" + taxAmount.toFixed(2);
+  totalPrice.innerText = "ل.س" + total.toFixed(2);
+}
+
+let shoppingCart = {
+  clearCart: function() {
+    cart = [];
+    updateCart();
+  }
+};
+
+function displayCart() {
+  let cartItems = document.getElementById("cart-items");
+  let subtotal = document.getElementById("subtotal");
+  let tax = document.getElementById("tax");
+  let totalPrice = document.getElementById("total-price");
+  cartItems.innerHTML = "";
+  let subTotal = 0;
+  cart.forEach(item => {
+    let tr = document.createElement("tr");
+    let tdCount = document.createElement("td");
+    tdCount.innerText = item.type;
+    tr.appendChild(tdCount);
+    let tdName = document.createElement("td");
+    tdName.innerText = item.name;
+    tr.appendChild(tdName);
+    let tdPrice = document.createElement("td");
+    tdPrice.innerText = "ل.س" + item.price.toFixed(2);
+    tr.appendChild(tdPrice);
+    let tdQuantity = document.createElement("td");
+    tdQuantity.innerText = item.quantity;
+    tr.appendChild(tdQuantity);
+    let tdTotalPrice = document.createElement("td");
+    let itemTotalPrice = item.price * item.quantity;
+    tdTotalPrice.innerText = "ل.س" + itemTotalPrice.toFixed(2);
+    tr.appendChild(tdTotalPrice);
+    cartItems.appendChild(tr);
+    subTotal += itemTotalPrice;
+  });
+  let taxAmount = subTotal * 0.05;
+  let total = subTotal + taxAmount;
+  subtotal.innerText = "ل.س" + subTotal.toFixed(2);
+  tax.innerText = "ل.س" + taxAmount.toFixed(2);
+  totalPrice.innerText = "ل.س" + total.toFixed(2);
+}
+            </script>
+            
+</body>
+</html>

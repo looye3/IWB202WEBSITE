@@ -1,0 +1,202 @@
+body {
+    box-sizing: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      margin: 0;
+    }
+
+.navbar {
+    overflow: hidden;   
+    background-color: rgb(73, 177, 233);
+
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight: bolder;
+
+}
+
+.navbar a:hover {
+    background-color: rgb(248, 248, 248);
+    color: rgb(0, 0, 0);
+    border-radius: 30%;
+}
+p {
+    line-height: 1.5;
+    text-align: center;
+    font-size: 20px;
+    font-style: tahoma;
+  }
+  a{
+    text-align: center;
+  }
+  #home{
+  text-align: center;
+  }
+  h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    text-align: center;
+
+
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 50%;
+    font-size: 15px;
+    margin: 0 auto; 
+	width: 800px;
+
+    
+}
+th, td {
+    border: 1px solid #ddd;
+    text-align: center auto;
+    padding: 8px;
+    font-weight: bold;
+}
+th {
+    background-color: #f2f2f2;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+ /* النمط للنافذة المنبثقة - الخلفية */
+ .modal {
+    display: none; /* مخفي بشكل افتراضي */
+    position: fixed; /* ثابت */
+    z-index: 1; /* يجلس على الجميع */
+    padding-top: 100px; /* الموقع */
+    left: 0;
+    top: 0;
+    width: 100%; /* عرض كامل */
+    height: 100%; /* ارتفاع كامل */
+    overflow: auto; /* تمكين التمرير */
+    background-color: rgb(0,0,0); /* الخلفية السوداء */
+    background-color: rgba(0,0,0,0.4); /* الخلفية السوداء مع شفافية */
+}
+
+/* النمط للنافذة المنبثقة - المحتوى */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* النمط للنافذة المنبثقة - زر الإغلاق */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button{
+    
+    background-color: #3498db; /* لون خلفية الزر */
+    color: #fff; /* لون النص */
+    padding: 10px 15px; /* هامش داخلي للزر */
+    border: none; /* إزالة حدود الزر */
+    border-radius: 5px; /* تدوير زوايا الزر */
+    cursor: pointer; /* تغيير شكل المؤشر عند تحويله فوق الزر */
+    
+}
+
+button:hover {
+    background-color: #2980b9; /* لون الخلفية عند تحويل المؤشر فوق الزر */
+
+}
+h3{
+  font-size: 36px;
+  padding:10px ;
+    text-align: center;
+    background-image: linear-gradient(#a5e3ff,#4ecced);
+    margin: auto;
+    height: 45px;
+    width: 51%;
+    border-radius: 9px;
+    
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"]{
+  display: grid;
+  margin:auto;
+  width: 70%;
+  height: 30px;
+  border-radius:6px;
+  border-width: 3px;
+  text-align:center;
+  font-size: 16px;
+  padding: 6px;
+  
+
+  
+  
+
+}
+label{
+  font-size: 20px;
+  font-weight: bold;
+
+    
+}
+#orderForm{
+  display: grid;
+  margin-top: 5px;
+  text-align:center;
+    display: grid;    
+    width: 50%; 
+    border: 6px solid #818181;
+    padding: 9px ;
+    border-radius: 20px;
+  margin-inline:auto;
+  background-image: linear-gradient(#e1edfd,#d8f0fa);
+}
+#btnrefresh{
+  margin-top: 9px;
+  margin-right: 6px;
+  background-color: #3498db;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 40%;
+  font-size: 25px;
+  font-weight: bold;
+
+}
+#btnValid{
+  margin-top: 9px;
+  margin-right: 6px;
+  background-color: #3498db;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 40%;
+  font-size: 25px;
+font-weight: bold;
+}
+#submit{
+  margin: auto;
+  width: 51%;
+  background-color: #3498db;
+  font-size: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 15px;
+}

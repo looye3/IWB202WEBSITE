@@ -1,0 +1,158 @@
+<html><head>
+    <title>السلة</title>
+<link rel="stylesheet" href="style.css">
+	<script type="text/javascript">
+ function chkName() {
+ var myName = document.getElementById("fullName");
+ var pos = myName.value.search(/[\u0600-\u06FF\u0750-\u077F]/);
+ if (pos != 0) {
+ alert("الاسم الذي قمت بأدخاله (" + myName.value +
+ ") ليس صحيحا. \n" +
+ "يرجى أعادة أدخال الاسم باللغة العربية");
+ myName.focus();
+ myName.select();
+ return false;
+ } else
+ return true;
+ }
+ function chkuid() {
+ var myuid = document.getElementById("nationalNumber");
+ var pos = myuid.value.search(/(?:01|02|03|04|05|06|07|08|09|10|11|12|13|14)[0-9]{9}$/);
+ if (pos != 0) {
+ alert("الرقم الوطني الذي قمت بأدخاله  (" + myuid.value +
+ ") ليس صحيحا \n" +
+ "يرجى أعادة أدخال الرقم الوطني المكون من 11 خانة");
+ myuid.focus();
+ myuid.select();
+  return false;
+ } else
+ return true;
+ }
+ function chkbirth() {
+ var mybirth = document.getElementById("birthDate");
+ var pos = mybirth.value.search(/^\d{2}-\d{2}-\d{4}$/);
+ if (pos != 0) {
+ alert("تاريخ الولادة الذي أدخلته (" + mybirth.value +
+ ") ليس صحيحا \n" +
+ "يرجى أعادة أدخال الشكل الصحيح التالي: dd-mm-yyyy \n");
+ mybirth.focus();
+ mybirth.select();
+  return false;
+ } else
+ return true;
+ }
+ function chkPhone() {
+ var myPhone = document.getElementById("mobileNumber");
+ var pos = myPhone.value.search(/09[0-9]{8}/);
+ if (pos != 0) {
+ alert("رقم الموبايل الذي أدخلته  (" + myPhone.value +
+ ") ليس صحيحا \n" +
+ "يرجى أعادة أدخال رقم الموبايل بالشكل الصحيح التالي : 09xxxxxxxx \n");
+ myPhone.focus();
+ myPhone.select();
+  return false;
+ } else
+ return true;
+ }
+ function chkmail() {
+ var mymail = document.getElementById("email");
+ var pos = mymail.value.search(/^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/);
+ if (pos != 0) {
+ alert("الايميل الذي قمت بأدخاله (" + mymail.value +
+ ") ليس صحيحا \n" +
+ "يرجى أعادة أدخال الايميل بالشكل الصحيح بحيث يحتوي على @ \n");
+ mymail.focus();
+ mymail.select();
+  return false;
+ } else
+ return true;
+ }
+ /* Function to Generat Captcha */
+function DisplayCodeForQR() {
+var first_arg = Math.ceil(Math.random() * 10) + '';
+var second_arg = Math.ceil(Math.random() * 10) + '';
+var third_arg = Math.ceil(Math.random() * 10) + '';
+
+var str = new Array(4).join().replace(/(.|$)/g, function () { return ((Math.random() * 36) | 0).toString(36)[Math.random() < .5 ? "toString" : "toUpperCase"](); });
+var results = str + first_arg + ' ' + second_arg + ' ' + third_arg;
+document.getElementById("userCapt").value = results
+}
+
+/* Validating Captcha Function */
+function CheckValidCaptcha() {
+var str1 = removeSpaces(document.getElementById('userCapt').value);
+var str2 = removeSpaces(document.getElementById('txtCompare').value);
+
+if (str1 == str2) return true;
+return false; 
+}
+
+/* Remove spaces from Captcha Code */
+function removeSpaces(string) {
+return string.split(' ').join('');
+}
+ 
+ 
+ </script><style type="text/css" id="operaUserStyle"></style><style type="text/css" id="operaUserStyle"></style>
+</head>
+<body onload="DisplayCodeForQR();">
+<h3> معلومات الزبون </h3>
+    <!-- النموذج -->
+    <form action="" id="orderForm">
+        <label for="fullName">الاسم الكامل باللغة العربية</label><br>
+        <input type="text" id="fullName" name="fullName" onchange="chkName();"><br>
+        <label for="nationalNumber">الرقم الوطني</label><br>
+        <input type="text" id="nationalNumber" name="nationalNumber" required=""><br>
+        <label for="birthDate">تاريخ الولادة</label><br>
+        <input type="text" id="birthDate" name="birthDate" placeholder="dd-mm-yyyy"><br>
+        <label for="mobileNumber">رقم الموبايل</label><br>
+        <input type="tel" id="mobileNumber" name="mobileNumber" placeholder="09xxxxxxxx"><br>
+        <label for="email">الإيميل</label><br>
+        <input type="email" id="email" name="email" placeholder="email@example.com"><br>
+		<label for="text">أدخل الرمز التحقق</label><br>
+		<div style=" margin: auto;">
+
+
+<input type="text" id="txtCompare" required="" style="margin-bottom: 9px;">
+<input type="text" id="userCapt" style="text-align: center; border: none; font-weight: bold; font-size: 20px; font-family: Modern; width: 50%; border-radius: 9px;">
+<input type="button" id="btnrefresh" value="تحديث" onclick="DisplayCodeForQR();">
+<input id="btnValid" type="button" value="التأكد" onclick="alert(CheckValidCaptcha());">
+
+<br>
+<br>
+</div>
+ <br><br>
+		
+		<input type="submit" id="submit" value="شراء">
+ <p></p>
+    </form>
+
+    <script type="text/javascript">
+	<!--
+// Set form element object properties to their
+// corresponding event handler functions
+document.getElementById("fullName").onchange = chkName;
+document.getElementById("nationalNumber").onchange = chkuid;
+document.getElementById("birthDate").onchange = chkbirth;
+document.getElementById("mobileNumber").onchange = chkPhone;
+document.getElementById("email").onchange = chkmail;
+ // -->
+ 
+	
+    // عند الضغط على الزر "شراء"
+    document.getElementById("orderForm").addEventListener("submit", function(event){
+        event.preventDefault(); // منع تحديث الصفحة
+
+        // التحقق من المدخلات هنا
+
+        // إذا نجح التحقق، أظهر النافذة المنبثقة أو الرسالة
+		if(CheckValidCaptcha() == true){
+        alert("المجموع النهائي: ... ل.س"); // استبدل "..." بالمجموع النهائي
+		}
+		else {alert("رمز التحقق غير صحيح"); }
+    });
+	
+	
+    </script>
+
+</body></html>
